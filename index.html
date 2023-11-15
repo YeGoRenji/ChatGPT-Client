@@ -94,7 +94,6 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       if (input.value) {
-        // socket.emit("chat message", input.value);
         console.log("Sending Value ", input.value.trim());
         const placeHolder = document.createElement("li");
         placeHolder.innerHTML = `<strong>USER:</strong> ${input.value}`;
@@ -116,21 +115,6 @@
         input.value = "";
       }
     });
-    // socket.on("messages", (msgs) => {
-    //   console.log(msgs)
-    //   messages.innerHTML = ''
-    //   msgs.map(msg => {
-    //     const item = document.createElement("li");
-    //     item.textContent = msg;
-    //     messages.appendChild(item);
-    //   })
-    // })
-    // socket.on("chat message", (msg) => {
-    //   const item = document.createElement("li");
-    //   item.textContent = msg;
-    //   messages.appendChild(item);
-    //   window.scrollTo(0, document.body.scrollHeight);
-    // });
   </script>
 </body>
 
